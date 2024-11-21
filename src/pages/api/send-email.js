@@ -18,11 +18,7 @@ export async function POST({ request }) {
         },
         To: [
           {
-            Email: "gladys_font@hotmail.com",
-            Name: "Gladys Font",
-          },
-          {
-            Email: "santiagomustafa1145@gmail.com",
+            Email: "minecraftenolimpocraft@gmail.com",
             Name: "Santiago Emanuel Mustafa Font",
           },
         ],
