@@ -2,12 +2,13 @@ import mailjet from "node-mailjet";
 
 export async function POST({ request }) {
   const { name, email, message } = await request.json();
-  console.log({ name, email, message });
 
   const mailjetClient = mailjet.apiConnect(
     import.meta.env.PUBLIC_KEY,
     import.meta.env.PUBLIC_SECRET
   );
+
+  console.log(name, email, message, mailjetClient);
 
   const response = mailjetClient.post("send", { version: "v3.1" }).request({
     Messages: [
@@ -364,7 +365,24 @@ export async function POST({ request }) {
     ],
   });
 
-  return new Response(JSON.stringify({ success: true, response }), {
-    status: 200,
-  });
+  try {
+    const result = await response.then((response) => {
+      return true;
+    });
+
+    return new Response(
+      JSON.stringify({
+        success: true,
+        response: "Mensaje enviado correctamente",
+      }),
+      {
+        status: 200,
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    return new Response(JSON.stringify({ success: false, response: error }), {
+      status: 200,
+    });
+  }
 }

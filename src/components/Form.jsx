@@ -17,8 +17,9 @@ export const Form = () => {
             message,
           }),
         })
+          .then((r) => r.json())
           .then((response) => {
-            console.log(response.success);
+            console.log(response.response);
           })
           .catch((err) => {
             console.log(err);
