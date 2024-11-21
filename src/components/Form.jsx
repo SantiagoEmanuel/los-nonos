@@ -1,4 +1,4 @@
-export const Form = () => {
+const Form = () => {
   return (
     <form
       onSubmit={(e) => {
@@ -51,3 +51,5 @@ export const Form = () => {
     </form>
   );
 };
+
+export default Form;
