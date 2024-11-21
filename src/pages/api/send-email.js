@@ -18,8 +18,8 @@ export async function POST({ request }) {
         },
         To: [
           {
-            Email: "minecraftenolimpocraft@gmail.com",
-            Name: "Santiago Mustafa",
+            Email: "gladys_font@hotmail.com",
+            Name: "Gladys Font",
           },
         ],
         Subject: "CONSULTA POR CAMPO LOS NONOS",
