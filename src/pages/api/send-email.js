@@ -21,6 +21,10 @@ export async function POST({ request }) {
             Email: "gladys_font@hotmail.com",
             Name: "Gladys Font",
           },
+          {
+            Email: "santiagomustafa1145@gmail.com",
+            Name: "Santiago Emanuel Mustafa Font",
+          },
         ],
         Subject: "CONSULTA POR CAMPO LOS NONOS",
         TextPart: "CONSULTA",
