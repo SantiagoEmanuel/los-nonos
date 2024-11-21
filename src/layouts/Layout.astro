@@ -1,50 +1,105 @@
----
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
----
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <!-- CHARSET -->
+    <meta charset="UTF-8" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Astro generator -->
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Title -->
+    <title>Los Nonos - Excelente Inversión Agricola</title>
+
+    <!-- Meta de idioma -->
+    <meta name="language" content="es" />
+
+    <!-- Descripción meta -->
+    <meta
+      name="description"
+      content="Adquiere un campo de 500 hectáreas con suelo fértil. Ideal para inversión. Incluye 8 lotes, alambrados, feedlot con agua, represas, tanque de 200,000 L, corrales, y casa equipada. ¡Todo en excelente estado!"
+    />
+
+    <!-- Palabras clave -->
+    <meta
+      name="keywords"
+      content="venta de campo, 500 hectáreas, suelo fértil, inversión en tierras, feedlot, represas, corrales, casa rural, campo en venta, tanque de agua, infraestructura agrícola, lotes alambrados, oportunidades de inversión"
+    />
+
+    <!-- Autor -->
+    <meta name="author" content="Santiago Emanuel Mustafa Font" />
+
+    <!-- Open Graph para redes sociales -->
+    <meta
+      property="og:title"
+      content="Venta de Campo: 500 Hectáreas Fértiles con Infraestructura Excelente"
+    />
+    <meta
+      property="og:description"
+      content="Campo ideal para inversión: 500 hectáreas, suelo fértil, feedlot, represas, tanque de agua, corrales, casa con luz. ¡Todo en excelente estado!"
+    />
+    <meta property="og:image" content="URL_DE_IMAGEN_DEL_CAMPO" />
+    <meta property="og:url" content="URL_DE_TU_SITIO" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Venta de Campo: 500 Hectáreas Fértiles con Infraestructura Excelente"
+    />
+    <meta
+      name="twitter:description"
+      content="Descubre esta oportunidad: 500 hectáreas con infraestructura de calidad, listas para inversión."
+    />
+    <meta name="twitter:image" content="URL_DE_IMAGEN_DEL_CAMPO" />
+
+    <!-- Meta de geolocalización -->
+    <meta name="geo.region" content="AR" />
+    <!-- AR: Código ISO para Argentina -->
+    <meta name="geo.placename" content="Santiago del Estero, Quimilí" />
+    <meta name="geo.position" content="-27.6333;-62.4167" />
+    <!-- Coordenadas aproximadas de Quimilí -->
+    <meta name="ICBM" content="-27.6333, -62.4167" />
+  </head>
+  <body>
+    <header
+      class="flex gap-8 p-4 sticky top-0 z-10 bg-white bg-opacity-15 backdrop-blur-sm items-baseline"
+    >
+      <a class="text-2xl font-semibold" href="/">Los Nonos</a>
+      <nav class="flex gap-4 items-center">
+        <a
+          class="hover:text-violet-500 transition-colors font-semibold before:absolute before:w-0 before:bg-violet-500 hover:before:w-full relative before:-bottom-1 before:h-[2px]"
+          href="#Inicio"
+        >
+          Inicio
+        </a>
+        <a
+          class="hover:text-violet-500 transition-colors font-semibold before:absolute before:w-0 before:bg-violet-500 hover:before:w-full relative before:-bottom-1 before:h-[2px]"
+          href="#Características"
+        >
+          Características
+        </a>
+        <a
+          class="hover:text-violet-500 transition-colors font-semibold before:absolute before:w-0 before:bg-violet-500 hover:before:w-full relative before:-bottom-1 before:h-[2px]"
+          href="#Galería"
+        >
+          Galería
+        </a>
+        <a
+          class="hover:text-violet-500 transition-colors font-semibold before:absolute before:w-0 before:bg-violet-500 hover:before:w-full relative before:-bottom-1 before:h-[2px]"
+          href="#Contacto"
+        >
+          Contacto
+        </a>
+      </nav>
+    </header>
+    <slot />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
+    ></script>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
