@@ -1,54 +1,33 @@
-# Astro Starter Kit: Basics
+# Los Nonos - Landing Page 🚜
 
-```sh
-npm create astro@latest -- --template basics
-```
+**Los Nonos** es una landing page desarrollada para promocionar una propiedad rural de 500 hectáreas, destacando sus características principales y ofreciendo un medio de contacto directo para interesados en realizar inversiones.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![Preview de la página](/public/image.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🌟 Características
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Promoción clara y atractiva**: Diseño enfocado en resaltar las características de la propiedad.
+- **Información estructurada**: Secciones dedicadas para características, galería y contacto.
+- **Optimizado para SEO y velocidad**: Construido con Astro para garantizar rendimiento.
+- **Adaptado a dispositivos móviles**: Diseño responsive que se ajusta perfectamente a cualquier pantalla.
 
-## 🚀 Project Structure
+## 🛠️ Tecnologías utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Astro](https://astro.build/) - Framework para desarrollo web estático y dinámico.
+- HTML y CSS - Para la estructura y estilos.
+- Integración de YouTube - Para mostrar un video en la galería.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🖼️ Vista previa
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Incluye imágenes o gifs que muestren cómo luce la página (como la que has compartido anteriormente).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📬 Contacto
 
-Any static assets, like images, can be placed in the `public/` directory.
+Si deseas contribuir o tienes alguna duda sobre el proyecto, puedes contactarme en:
 
-## 🧞 Commands
+- **Email**: <santiagomustafa3@gmail.com>
+- **Teléfono**: +54 9 3855852437
 
-All commands are run from the root of the project, from a terminal:
+## 🌱 Contribuciones
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Las contribuciones son bienvenidas. Si tienes alguna idea para mejorar el proyecto, siéntete libre de abrir un [issue](https://github.com/usuario/los-nonos-landing/issues) o enviar un pull request.
