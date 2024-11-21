@@ -40,7 +40,10 @@
       property="og:description"
       content="Campo ideal para inversión: 500 hectáreas, suelo fértil, feedlot, represas, tanque de agua, corrales, casa con luz. ¡Todo en excelente estado!"
     />
-    <meta property="og:image" content="/public/image.png" />
+    <meta
+      property="og:image"
+      content="https://github.com/SantiagoEmanuel/los-nonos/blob/master/public/image.png"
+    />
     <meta property="og:url" content="https://los-nonos.vercel.app/" />
     <meta property="og:type" content="website" />
 
@@ -54,7 +57,10 @@
       name="twitter:description"
       content="Descubre esta oportunidad: 500 hectáreas con infraestructura de calidad, listas para inversión."
     />
-    <meta name="twitter:image" content="/public/image.png" />
+    <meta
+      name="twitter:image"
+      content="https://github.com/SantiagoEmanuel/los-nonos/blob/master/public/image.png"
+    />
 
     <!-- Meta de geolocalización -->
     <meta name="geo.region" content="AR" />
@@ -68,29 +74,35 @@
     <header
       class="flex gap-8 p-4 sticky top-0 z-10 bg-white bg-opacity-15 backdrop-blur-sm items-baseline max-sm:hidden"
     >
-      <a class="text-2xl font-semibold" href="/">Los Nonos</a>
+      <a class="text-2xl font-semibold" href="/" aria-label="Inicio de Página"
+        >Los Nonos</a
+      >
       <nav class="flex gap-4 items-center">
         <a
           class="hover:text-violet-500 transition-colors font-semibold before:absolute before:w-0 before:bg-violet-500 hover:before:w-full relative before:-bottom-1 before:h-[2px]"
           href="#Inicio"
+          aria-label="Ir al inicio de la página"
         >
           Inicio
         </a>
         <a
           class="hover:text-violet-500 transition-colors font-semibold before:absolute before:w-0 before:bg-violet-500 hover:before:w-full relative before:-bottom-1 before:h-[2px]"
           href="#Características"
+          aria-label="Ir a las Características del campo"
         >
           Características
         </a>
         <a
           class="hover:text-violet-500 transition-colors font-semibold before:absolute before:w-0 before:bg-violet-500 hover:before:w-full relative before:-bottom-1 before:h-[2px]"
           href="#Galería"
+          aria-label="Ir a la galería de fotos/videos del campo"
         >
           Galería
         </a>
         <a
           class="hover:text-violet-500 transition-colors font-semibold before:absolute before:w-0 before:bg-violet-500 hover:before:w-full relative before:-bottom-1 before:h-[2px]"
           href="#Contacto"
+          aria-label="Ir a la sección del Formulario de contacto"
         >
           Contacto
         </a>
@@ -100,6 +112,6 @@
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
-    ></script>
+      is:inline></script>
   </body>
 </html>
