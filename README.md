@@ -2,8 +2,6 @@
 
 **Los Nonos** es una landing page desarrollada para promocionar una propiedad rural de 500 hectáreas, destacando sus características principales y ofreciendo un medio de contacto directo para interesados en realizar inversiones.
 
-![Preview de la página](/public/image.png)
-
 ## 🌟 Características
 
 - **Promoción clara y atractiva**: Diseño enfocado en resaltar las características de la propiedad.
@@ -19,7 +17,7 @@
 
 ## 🖼️ Vista previa
 
-Incluye imágenes o gifs que muestren cómo luce la página (como la que has compartido anteriormente).
+![Preview de la página](/public/image.png)
 
 ## 📬 Contacto
 
