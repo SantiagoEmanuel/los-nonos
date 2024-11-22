@@ -1,16 +1,15 @@
-import mailjet from "node-mailjet";
+import { mail } from "@/lib/utils";
 
-export async function POST({ request }) {
-  const { name, email, message } = await request.json();
+interface RequestBody {
+  name: string;
+  email: string;
+  message: string;
+}
 
-  const mailjetClient = mailjet.apiConnect(
-    import.meta.env.PUBLIC_KEY,
-    import.meta.env.PUBLIC_SECRET
-  );
+export async function POST({ request }: { request: Request }) {
+  const { name, email, message }: RequestBody = await request.json();
 
-  console.log(name, email, message, mailjetClient);
-
-  const response = mailjetClient.post("send", { version: "v3.1" }).request({
+  const response = mail.post("send", { version: "v3.1" }).request({
     Messages: [
       {
         From: {
@@ -371,22 +370,43 @@ export async function POST({ request }) {
 
   try {
     const result = await response.then((response) => {
-      return true;
+      if (response.response.status) return true;
+      return false;
     });
 
+    if (result) {
+      return new Response(
+        JSON.stringify({
+          success: true,
+          response:
+            "Mensaje enviado correctamente, pronto nos pondremos en contacto contigo",
+        }),
+        {
+          status: 200,
+        }
+      );
+    } else {
+      return new Response(
+        JSON.stringify({
+          success: false,
+          response:
+            "Ha ocurrido un error al enviar el correo, inténtalo más tarde",
+        }),
+        {
+          status: 500,
+        }
+      );
+    }
+  } catch (error) {
     return new Response(
       JSON.stringify({
-        success: true,
-        response: "Mensaje enviado correctamente",
+        success: false,
+        response:
+          "Ha ocurrido un error al enviar el correo, inténtalo más tarde",
       }),
       {
-        status: 200,
+        status: 500,
       }
     );
-  } catch (error) {
-    console.log(error);
-    return new Response(JSON.stringify({ success: false, response: error }), {
-      status: 200,
-    });
   }
 }
