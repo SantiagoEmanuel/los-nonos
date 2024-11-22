@@ -35,7 +35,7 @@ const Form = () => {
               if (response.success) {
                 if (message == "") {
                   Alert({
-                    type: "warning",
+                    type: "info",
                     message:
                       "Se enviara el correo electrónico sin un mensaje personalizado",
                   });
@@ -70,16 +70,17 @@ const Form = () => {
         required
       />
       <textarea
-        className="p-2 outline-offset-1 rounded-md resize-none h-20"
+        className="p-2 outline-offset-1 rounded-md resize-none min-h-40"
         name="message"
-        placeholder="Escriba su mensaje"
         minLength={10}
         maxLength={600}
-        content={`
-          Preguntas que quieras hacer:
-          
-          Otra información de contacto que quieras agregar como por ejemplo tu número
-          `}
+        placeholder="Escribe tu mensaje personalizado"
+        defaultValue={`Preguntas que quieras hacer:
+- 
+- 
+- 
+
+Otra información de contacto que quieras agregar como por ejemplo tu número`}
       ></textarea>
 
       <button className="text-white font-semibold w-full bg-green-600 hover:bg-green-700 p-2 rounded-md">
