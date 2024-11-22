@@ -1,4 +1,4 @@
-import { mail } from "@/lib/utils";
+import { mail } from "@/lib/mailjet";
 
 interface RequestBody {
   name: string;
