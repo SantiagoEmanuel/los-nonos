@@ -49,6 +49,10 @@ const Form = () => {
               Alert({ type: "error", message: err.message });
             });
         } else {
+          Alert({
+            type: "warning",
+            message: "Se han ingresado datos inválidos",
+          });
         }
       }}
       className="space-y-4 flex flex-col"
