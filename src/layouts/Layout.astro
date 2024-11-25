@@ -14,11 +14,11 @@ import "react-toastify/dist/ReactToastify.css";
     <!-- Astro generator -->
     <meta name="generator" content={Astro.generator} />
 
+    <!-- Icon -->
+    <link rel="shortcut icon" href="/public/favicon.svg" type="image/*" />
+
     <!-- Title -->
     <title>Los Nonos - Excelente Inversión Agricola</title>
-
-    <!-- Meta de idioma -->
-    <meta name="language" content="es" />
 
     <!-- Descripción meta -->
     <meta
@@ -83,7 +83,7 @@ import "react-toastify/dist/ReactToastify.css";
   </head>
   <body>
     <header
-      class="flex gap-8 p-4 sticky top-0 z-10 bg-white bg-opacity-15 backdrop-blur-sm items-baseline max-sm:hidden"
+      class="flex gap-8 p-4 sticky top-0 z-10 bg-white bg-opacity-15 backdrop-blur-sm items-baseline max-sm:hidden h-20"
     >
       <a class="text-2xl font-semibold" href="/" aria-label="Inicio de Página"
         >Los Nonos</a
@@ -119,8 +119,25 @@ import "react-toastify/dist/ReactToastify.css";
         </a>
       </nav>
     </header>
+    <div
+      id="progress-bar"
+      class="bg-orange-500 h-1 sticky top-20 transition-transform z-10 w-0 flex items-end justify-end max-[640px]:hidden"
+    >
+      <img
+        src="/public/favicon.svg"
+        alt="Icono representativo de un campo"
+        class="max-w-[32px]"
+      />
+    </div>
+    <script>
+      const progressBar = document.getElementById("progress-bar")!;
+      window.addEventListener("scroll", () => {
+        progressBar.style.width = `${Math.round(
+          (window.scrollY / (document.body.scrollHeight - 960)) * 100
+        )}%`;
+      });
+    </script>
     <slot />
-
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"
