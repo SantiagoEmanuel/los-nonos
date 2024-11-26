@@ -75,6 +75,7 @@ const Form = () => {
       />
       <textarea
         className="p-2 outline-offset-1 rounded-md resize-none min-h-40"
+        style={{ fieldSizing: "content", maxHeight: 400 }}
         name="message"
         minLength={10}
         maxLength={600}
