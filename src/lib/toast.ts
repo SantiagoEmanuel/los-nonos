@@ -1,9 +1,5 @@
+import type { AlertTypes } from "@/types/alert";
 import { toast } from "react-toastify";
-
-interface AlertTypes {
-  type: "warning" | "success" | "info" | "error";
-  message: string;
-}
 
 const Alert = ({ type, message }: AlertTypes) => {
   switch (type) {

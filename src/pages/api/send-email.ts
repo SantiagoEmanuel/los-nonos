@@ -1,10 +1,5 @@
-import { mail } from "@/lib/mailjet";
-
-interface RequestBody {
-  name: string;
-  email: string;
-  message: string;
-}
+import mail from "@/lib/mailjet";
+import type { RequestBody } from "@/types/request";
 
 export async function POST({ request }: { request: Request }) {
   const { name, email, message }: RequestBody = await request.json();
